@@ -1,0 +1,420 @@
+/*************************************
+  SEÇÃO 0: Variáveis
+*************************************/
+:root {
+    --main-font: 'Cabin', sans-serif;
+}
+
+/*************************************
+  SEÇÃO 1: Reset CSS
+*************************************/
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+a,
+button {
+    cursor: revert;
+}
+
+ol,
+ul,
+menu,
+summary {
+    list-style: none;
+}
+
+img {
+    max-inline-size: 100%;
+    max-block-size: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+input,
+textarea {
+    -webkit-user-select: auto;
+}
+
+textarea {
+    white-space: revert;
+}
+
+meter {
+    -webkit-appearance: revert;
+    appearance: revert;
+}
+
+:where(pre) {
+    all: revert;
+    box-sizing: border-box;
+}
+
+::placeholder {
+    color: unset;
+}
+
+:where([hidden]) {
+    display: none;
+}
+
+:where([contenteditable]:not([contenteditable="false"])) {
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
+    -webkit-user-select: auto;
+}
+
+:where([draggable="true"]) {
+    -webkit-user-drag: element;
+}
+
+:where(dialog:modal) {
+    all: revert;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    font-family: var(--main-font);
+}
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/*************************************
+  SEÇÃO 2: Container
+*************************************/
+.container {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+/*************************************
+  SEÇÃO 3: Estilos Globais
+*************************************/
+html {
+    font-size: 62.5%;
+}
+
+h1 {
+    font-size: 7.2rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+    line-height: 150%;
+}
+
+h4 {
+    font-size: 2rem;
+    line-height: 112%;
+}
+
+h1,
+h2 {
+    font-weight: 600;
+    letter-spacing: -0.1rem;
+    line-height: 112%;
+}
+
+h3,
+h4 {
+    font-weight: 500;
+    letter-spacing: -0.05rem;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    font-family: var(--main-font);
+}
+
+.primary-button {
+    display: block;
+    border: solid 1px rgb(38, 38, 199);
+    padding: 1.6rem 3.2rem;
+    font-size: 1.6rem;
+    background-color: rgb(38, 38, 199);
+    color: #FFF;
+}
+
+.secondary-button {
+    display: block;
+    padding: 1.6rem 3.2rem;
+    font-size: 1.6rem;
+    color: rgb(38, 38, 199);
+    border: solid 1px rgb(38, 38, 199);
+    background-color: transparent;
+}
+
+.article-button {
+    display: block;
+    border: solid 1px rgb(38, 38, 199);
+    padding: 0.6rem 2.4rem;
+    font-size: 1.4rem;
+    background-color: rgb(38, 38, 199);
+    color: #FFF;
+    border-radius: 10rem;
+}
+
+section {
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+}
+
+/*************************************
+  SEÇÃO 4: Header
+*************************************/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+.menu {}
+
+.menu>ul {
+    display: flex;
+    gap: 32px;
+    font-size: 1.6rem;
+}
+
+.menu-actions {
+    display: flex;
+    font-size: 1.6rem;
+    gap: 32px;
+}
+
+/*************************************
+  SEÇÃO 4: Hero Section
+*************************************/
+.hero-section {
+    padding-top: 16rem;
+}
+
+.hero-section>.container {
+    display: flex;
+    gap: 4rem;
+}
+
+.hero-text {
+    padding-bottom: 16rem;
+    width: 72rem;
+}
+
+.hero-text h1 {
+    margin-bottom: 1.6rem;
+}
+
+.hero-text p {
+    font-size: 1.8rem;
+    margin-bottom: 3.2rem;
+}
+
+.hero-actions-buttons {
+    display: flex;
+    gap: 1.6rem;
+    font-size: 1.6rem;
+}
+
+.hero-image {
+    max-width: 78rem;
+}
+
+/*************************************
+  SEÇÃO 5: Destinos em alta / Melhores pontos
+*************************************/
+.featured-section, .top-selected-section {
+    padding: 6.4rem 2rem;
+}
+
+.locations-list {
+    margin-top: 3.6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2.4rem;
+}
+
+.locations-list article {
+    background: #FBFBFB;
+    border-radius: 0.8rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.location-image {
+    flex: 0 0 100%;
+}
+
+.image-container {
+    position: relative;
+    padding-top: 75%;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.locations-list article img {
+    border-radius: 0.8rem 0.8rem 0 0;
+    padding: 0px;
+    object-fit: cover;
+}
+
+.location-title {
+    padding: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.locations-list article p {
+    padding: 0 1.6rem;
+}
+
+.locations-list article button {
+    margin: 1.6rem;
+}
+
+/*************************************
+  SEÇÃO 6: Conecte-se
+*************************************/
+.network-section {
+    padding: 6.4rem 2rem;
+    background: rgb(38, 38, 199);
+}
+
+.network-section h2 {
+    color: #FFF;
+    margin-bottom: 0.8rem;
+}
+
+.network-section p {
+    color: #ffffffce;
+    margin-bottom: 3.2rem;
+}
+
+.cities-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.cities-container .first-line {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.4rem;
+}
+
+.cities-container .second-line {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.4rem;
+}
+
+.city-card {
+    background: #FFF;
+    padding: 4.8rem;
+    border-radius: 1.6rem;
+}
+
+/*************************************
+  SEÇÃO 7: Planeje
+*************************************/
+.plan-section {
+    padding: 6.4rem 2rem;
+}
+
+.plan-section h2 {
+    margin-bottom: 0.8rem;
+}
+
+.plan-section .filter {
+    display: flex;
+    font-size: 1.6rem;
+    gap: 4.8rem;
+    margin: 4rem 0;
+    color: rgba(0, 0, 0, 0.616);
+}
+
+.plan-section .filter-results {
+    display: grid;
+    gap: 2.4rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.plan-section .filter-results > article {
+    background-color: lavender;
+    padding: 14rem 2.4rem;
+}
+
+/*************************************
+  SEÇÃO 8: Melhores pontos turísticos
+*************************************/
