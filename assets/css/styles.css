@@ -234,6 +234,10 @@ section {
 
 .logo {
     font-size: 2rem;
+    height: 64px;
+    width: 200px;
+    display: flex;
+    align-items: center;
 }
 
 .menu {}
@@ -247,7 +251,22 @@ section {
 .menu-actions {
     display: flex;
     font-size: 1.6rem;
-    gap: 32px;
+    gap: 1.6rem;
+}
+
+.my-trips-button, .login-button {
+    padding: 1.2rem 4.8rem;
+    border-radius: 4rem;
+    font-weight: 600;
+    color: #FFF;
+}
+
+.login-button {
+    background-color: darkblue;
+}
+
+.my-trips-button {
+    background-color: #0394fa;
 }
 
 /*************************************
