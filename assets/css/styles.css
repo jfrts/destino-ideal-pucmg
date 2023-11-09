@@ -3,6 +3,9 @@
 *************************************/
 :root {
     --main-font: 'Cabin', sans-serif;
+    --default-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    --linear-dark-blue: linear-gradient(to top, rgba(18, 29, 67, 1) 0%, rgba(0, 102, 191, 1) 100%);
+    --linear-blue-base: rgba(18, 29, 67, 1);
 }
 
 /*************************************
@@ -286,7 +289,8 @@ section {
 /*************************************
   SEÇÃO 5: Destinos em alta / Melhores pontos
 *************************************/
-.featured-section, .top-selected-section {
+.featured-section,
+.top-selected-section {
     padding: 6.4rem 2rem;
 }
 
@@ -300,7 +304,7 @@ section {
 .locations-list article {
     background: #FBFBFB;
     border-radius: 0.8rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    box-shadow: var(--default-box-shadow);
 }
 
 .location-image {
@@ -396,6 +400,10 @@ section {
     margin-bottom: 0.8rem;
 }
 
+.plan-section p {
+    margin-bottom: 3.2rem;
+}
+
 .plan-section .filter {
     display: flex;
     font-size: 1.6rem;
@@ -410,11 +418,186 @@ section {
     grid-template-columns: repeat(4, 1fr);
 }
 
-.plan-section .filter-results > article {
-    background-color: lavender;
+.plan-section .filter-results>article {
     padding: 14rem 2.4rem;
 }
 
 /*************************************
-  SEÇÃO 8: Melhores pontos turísticos
+  SEÇÃO 8: Blog
 *************************************/
+.blog-section, .partner-section {
+    padding: 6.4rem 2rem;
+    background: #F2F2F2;
+}
+
+.blog-section h2 {
+    margin-bottom: 0.8rem;
+}
+
+.blog-section p {
+    margin-bottom: 3.2rem;
+}
+
+.posts-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "a a b c"
+        "a a d e";
+    gap: 2.4rem;
+}
+
+.posts-container>div:nth-child(1) {
+    grid-area: a;
+}
+
+.posts-container>div:nth-child(2) {
+    grid-area: b;
+}
+
+.posts-container>div:nth-child(3) {
+    grid-area: c;
+}
+
+.posts-container>div:nth-child(4) {
+    grid-area: d;
+}
+
+.posts-container>div:nth-child(5) {
+    grid-area: e;
+}
+
+.blog-post {
+    padding: 9.6rem 4.8rem;
+    background-color: rgb(38, 38, 199);
+}
+
+/*************************************
+  SEÇÃO 9: Ofertas
+*************************************/
+.offers-section {
+    padding: 6.4rem 2rem;
+}
+
+.offers-section h2 {
+    margin-bottom: 3.2rem;
+}
+
+.newsletter-container {
+    background: var(--linear-blue-base);
+    background: var(--linear-dark-blue);
+    padding: 6.4rem 4.8rem;
+    border-radius: 3.2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    box-shadow: var(--default-box-shadow);
+}
+
+.newsletter-container h3 {
+    color: #FFF;
+    line-height: 100%;
+    font-weight: bold;
+    margin-bottom: 2.4rem;
+    font-size: 4.8rem;
+}
+
+.newsletter-infos p {
+    color: #ffffffdc;
+    font-size: 2rem;
+    line-height: 150%;
+    padding-right: 15rem;
+}
+
+.newsletter-container .form-area form {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter-container .form-area form label {
+    font-size: 2rem;
+    margin-bottom: 1.6rem;
+    color: #FFF;
+}
+
+.newsletter-container .form-area form input[type="email"] {
+    width: 100%;
+    padding: 2.4rem 0.8rem;
+    background-color: #FFF;
+    border: none;
+    border-radius: 0.8rem;
+    font-size: 1.8rem;
+    color: #6a6a6a;
+}
+
+.terms-container {
+    padding: 2.4rem 0;
+    display: flex;
+    gap: 1.6rem;
+}
+
+.newsletter-container .form-area form input[type="checkbox"] {
+    background-color: #FFF;
+    align-self: flex-start;
+    padding: 0.8rem;
+    margin-top: 0.8rem;
+    color: #000;
+}
+
+.newsletter-container .form-area p {
+    color: #ffffffdc;
+    font-size: 2rem;
+    line-height: 150%;
+}
+
+.newsletter-container .form-area form button {
+    padding: 1.2rem 4.8rem;
+    font-size: 2rem;
+    border-radius: 4rem;
+    color: #FFF;
+    background-color: #0394fa;
+    align-self: flex-start;
+}
+
+/*************************************
+  SEÇÃO 10: Footer
+*************************************/
+.footer {
+    padding: 6.4rem 2rem;
+    background: var(--linear-blue-base);
+    background: var(--linear-dark-blue);
+    color: #FFF;
+}
+
+.footer .footer-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.footer h4 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 2.4rem;
+}
+
+.footer li {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+}
+
+.divider {
+    display: block;
+    height: 1.5px;
+    background-color: #FFF;
+    margin: 4.8rem auto;
+}
+
+.social-area {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-area .copy {
+    font-size: 1.8rem;
+}
