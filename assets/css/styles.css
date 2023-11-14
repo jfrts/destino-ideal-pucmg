@@ -2,7 +2,10 @@
   SEÇÃO 0: Variáveis
 *************************************/
 :root {
-    --main-font: 'Cabin', sans-serif;
+    --main-font: 'Roboto', sans-serif;
+    --title-font: 'Montserrat', sans-serif;
+    --primary-color: #0394FA;
+    --secondary-color: #024994;
     --default-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     --linear-dark-blue: linear-gradient(to top, rgba(18, 29, 67, 1) 0%, rgba(0, 102, 191, 1) 100%);
     --linear-blue-base: rgba(18, 29, 67, 1);
@@ -146,6 +149,10 @@ html {
     font-size: 62.5%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--title-font);
+}
+
 h1 {
     font-size: 7.2rem;
 }
@@ -166,7 +173,7 @@ h4 {
 
 h1,
 h2 {
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: -0.1rem;
     line-height: 112%;
 }
@@ -181,38 +188,33 @@ p {
     font-size: 1.6rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-p {
-    font-family: var(--main-font);
-}
-
 .primary-button {
     display: block;
-    border: solid 1px rgb(38, 38, 199);
-    padding: 1.6rem 3.2rem;
-    font-size: 1.6rem;
-    background-color: rgb(38, 38, 199);
+    border: solid 1px var(--primary-color);
+    padding: 1.6rem 4.8rem;
+    border-radius: 4.8rem;
+    font-size: 1.8rem;
+    background-color: var(--primary-color);
     color: #FFF;
 }
 
 .secondary-button {
     display: block;
-    padding: 1.6rem 3.2rem;
-    font-size: 1.6rem;
-    color: rgb(38, 38, 199);
-    border: solid 1px rgb(38, 38, 199);
+    padding: 1.6rem 4.8rem;
+    border-radius: 4.8rem;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    border: solid 1px var(--primary-color);
     background-color: transparent;
 }
 
 .article-button {
     display: block;
-    border: solid 1px rgb(38, 38, 199);
+    border: solid 1px var(--primary-color);
     padding: 0.6rem 2.4rem;
     font-size: 1.4rem;
-    background-color: rgb(38, 38, 199);
+    letter-spacing: 1.04px;
+    background-color: var(--primary-color);
     color: #FFF;
     border-radius: 10rem;
 }
@@ -244,8 +246,17 @@ section {
 
 .menu>ul {
     display: flex;
-    gap: 32px;
-    font-size: 1.6rem;
+    gap: 1.6rem;
+    font-size: 1.7rem;
+}
+
+.menu a {
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.menu a.active {
+    color: var(--primary-color);
 }
 
 .menu-actions {
@@ -254,19 +265,37 @@ section {
     gap: 1.6rem;
 }
 
+.menu-actions input {
+    padding: 1.2rem 0 1.2rem 1.2rem;
+    border-radius: 4rem;
+    font-weight: 600;
+    font-size: 1.6rem;
+    border: 1px solid #666;
+    color: #444;
+}
+
 .my-trips-button, .login-button {
-    padding: 1.2rem 4.8rem;
+    font-size: 1.6rem;
+    padding: 1.2rem 4rem;
+    line-height: 100%;
     border-radius: 4rem;
     font-weight: 600;
     color: #FFF;
+    transition: all 200ms;
 }
 
 .login-button {
-    background-color: darkblue;
+    background-color: var(--secondary-color);
 }
 
 .my-trips-button {
-    background-color: #0394fa;
+    background-color: var(--primary-color);
+}
+
+button:hover, 
+.login-button:hover, 
+.my-trips-button:hover {
+    transform: scale(1.02);
 }
 
 /*************************************
@@ -283,7 +312,7 @@ section {
 
 .hero-text {
     padding-bottom: 16rem;
-    width: 72rem;
+    width: 80rem;
 }
 
 .hero-text h1 {
@@ -302,7 +331,7 @@ section {
 }
 
 .hero-image {
-    max-width: 78rem;
+    max-width: 64rem;
 }
 
 /*************************************
@@ -371,7 +400,7 @@ section {
 *************************************/
 .network-section {
     padding: 6.4rem 2rem;
-    background: rgb(38, 38, 199);
+    background: var(--primary-color);
 }
 
 .network-section h2 {
