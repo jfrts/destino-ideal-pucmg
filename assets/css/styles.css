@@ -661,7 +661,6 @@ button:hover,
 *************************************/
 .footer {
     padding: 6.4rem 2rem;
-    background: var(--linear-blue-base);
     background: var(--linear-dark-blue);
     color: #FFF;
 }
@@ -704,4 +703,55 @@ button:hover,
     display: flex;
     justify-content: end;
     gap: 2.4rem;
+}
+
+/*************************************
+  SEÇÃO 11: Title Section
+*************************************/
+.title-section {
+    padding: 8rem 0;
+    background: var(--linear-dark-blue);
+}
+
+.title-section h1 {
+    max-width: 64rem;
+    font-size: 4.6rem;
+    color: #FFF;
+    line-height: 150%;
+}
+
+/*************************************
+  SEÇÃO 12: Destinos.html
+*************************************/
+.s-inspire {
+    background-color: #f5f3f3;
+    padding: 6.2rem 0;
+}
+
+.s-inspire .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3.6rem;
+}
+
+.s-inspire  .post-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 4.8rem;
+}
+
+.s-inspire  .post-list .post {
+    max-width: 41rem;
+}
+
+.s-inspire  .post-list .post img {
+    margin-bottom: 3.2rem;
+    width: 350px;
+    height: 240px;
+    object-fit: none;
+}
+
+.s-inspire  .post-list .post h4 {
+    font-weight: 600;
 }
