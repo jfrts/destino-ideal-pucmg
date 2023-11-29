@@ -819,3 +819,59 @@ button:hover,
     font-weight: bold;
     color: #0394FA;
 }
+
+/*************************************
+  SEÇÃO 13: Minhas Viagens
+*************************************/
+.s-minhas-viagens {
+    padding: 9.6rem 0;
+}
+
+.s-minhas-viagens .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 18rem;
+}
+
+.s-minhas-viagens h2 {
+    font-weight: bold;
+    margin-bottom: 2.4rem;
+}
+
+.s-minhas-viagens h6 {
+    font-size: 2rem;
+    margin-bottom: 2.4rem;
+}
+
+.s-minhas-viagens p {
+    font-size: 1.8rem;
+    line-height: 160%;
+}
+
+.s-minhas-viagens img {
+    max-width: 52rem;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 1.6rem;
+}
+
+.s-viagens {
+    padding: 14.4rem 1.6rem;
+    text-align: center;
+}
+
+.s-viagens h2 {
+    margin-bottom: 2.4rem;
+}
+
+.s-viagens p {
+    margin-bottom: 3.2rem;
+}
+
+.s-viagens .secondary-button {
+    border: 1px solid var(--primary-color);
+    flex-shrink: 0;
+    display: inline-flex;
+}
