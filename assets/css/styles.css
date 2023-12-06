@@ -54,11 +54,6 @@ table {
     border-collapse: collapse;
 }
 
-input,
-textarea {
-    -webkit-user-select: auto;
-}
-
 textarea {
     white-space: revert;
 }
@@ -85,8 +80,6 @@ meter {
     -moz-user-modify: read-write;
     -webkit-user-modify: read-write;
     overflow-wrap: break-word;
-    -webkit-line-break: after-white-space;
-    -webkit-user-select: auto;
 }
 
 :where([draggable="true"]) {
@@ -262,8 +255,6 @@ section {
     display: flex;
     align-items: center;
 }
-
-.menu {}
 
 .menu>ul {
     display: flex;
@@ -726,8 +717,9 @@ button:hover,
   SEÇÃO 11: Title Section
 *************************************/
 .title-section {
-    padding: 8rem 0;
     background: var(--linear-dark-blue);
+    margin-top: 10.5rem;
+    padding: 8rem 0;
 }
 
 .title-section h1 {
@@ -841,7 +833,7 @@ button:hover,
   SEÇÃO 13: Minhas Viagens
 *************************************/
 .s-minhas-viagens {
-    padding: 9.6rem 0;
+    padding: 24rem 0 9.6rem 0;
 }
 
 .s-minhas-viagens .container {
@@ -891,4 +883,115 @@ button:hover,
     border: 1px solid var(--primary-color);
     flex-shrink: 0;
     display: inline-flex;
+}
+
+/*************************************
+  SEÇÃO 14: O que fazer?
+*************************************/
+.s-title-o-que-fazer {
+    margin-top: 16rem;
+    text-align: center;
+    width: 100%;
+}
+
+.s-title-o-que-fazer h1 {
+    font-size: 5.2rem;
+    margin: 0 auto;
+    margin-bottom: 1.2rem;
+    max-width: 64.9rem;
+    width: 100%;
+}
+
+.s-title-o-que-fazer p {
+    line-height: 150%;
+    margin: 0 auto;
+    max-width: 58rem;
+    width: 100%;
+}
+
+.load-more-buttons {
+    display: inline-block;
+    margin: 5.6rem auto 0 auto;
+}
+
+/*************************************
+  SEÇÃO 15: Eventos
+*************************************/
+.s-events .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.s-events .container h2 {
+    margin-bottom: 5.6rem;
+}
+
+.s-events .event-list, .offer-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+} 
+
+.s-events .event-list .event-card, .offer-card {
+    width: 28.75rem;
+    height: 28.75rem;
+    border-radius: 1.6rem;
+    background-color: #dedede;
+    padding: 2.6rem;
+    display: flex;
+    align-items: flex-end;
+}
+
+.s-events .event-list .event-card h6, .offer-card h6 {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+/*************************************
+  SEÇÃO 16: Planejar viagens
+*************************************/
+.planejar-viagem-title h1 {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    max-width: 100%;
+}
+
+.planejar-viagem-title p {
+    font-size: 2rem;
+    color: #dedede;
+    width: 100%;
+    max-width: 68rem;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 130%;
+    margin-bottom: 4.3rem;
+}
+
+.planejar-viagem-title form {
+    display: flex;
+    gap: 1.6rem;
+    justify-content: center;
+}
+
+.planejar-viagem-title form .inputs {
+    display: flex;
+    justify-content: center;
+}
+
+.planejar-viagem-title form .inputs input:nth-child(1) {
+    border-radius: 999rem 0 0 999rem;
+}
+
+.planejar-viagem-title form .inputs input:nth-child(3) {
+    border-radius: 0 999rem 999rem 0;
+}
+
+.planejar-viagem-title form .inputs input {
+    padding: 1.5rem 3.2rem;
+    font-size: 1.8rem;
+    background-color: #FFFFFF;
+    border: none;
+    outline: none;
 }
